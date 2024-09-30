@@ -205,7 +205,7 @@ max-width: 450px;
 }
 
 
-@media (max-width:930px) {
+@media (max-width:830px) {
     .left-container {
         display: none;
     }
