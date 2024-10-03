@@ -13,5 +13,4 @@ atalhoButton.forEach(button => {
 
 
 
-    });
-})
+    }
