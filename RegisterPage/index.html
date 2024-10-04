@@ -11,7 +11,7 @@
         <div class="left-container">
             <div class="top-left">
                 <img class="img-logo" src="./imagens/LogoPNG.png">
-                <p>Vença no jogo, conquiste na vida.</p>
+                <p>Vença no jogo, conquiste na vida!</p>
             </div>
 
             <div class="image-box">
@@ -41,17 +41,14 @@
                         <div class="input-group">
                             <input type="email" id="email-input" placeholder="Email" required>                    
                             <div class="email-types">
-                                <p class="button">@uol.com.br</p>
-                                <p class="button">@gmail.com</p>
-                                <p class="button">@outlook.com</p>
+                                <p onclick="addDomain('@uol.com.br')" class="button" id="oul">@uol.com.br</p>
+                                <p onclick="addDomain('@gmail.com')" class="button" id="gmail">@gmail.com</p>
+                                <p onclick="addDomain('@outlook.com')" class="button" id="outlook">@outlook.com</p>
                             </div>
                     </div>
 
                     </div>
-
-                 
-                   
-
+              
                     <div class="input-group">
                         <input type="date" id="date-input" placeholder="Data de nascimento" required>
     
@@ -71,27 +68,23 @@
                     <div class="grudado-inputs">
 
                         <div class="input-group">
-                            <input type="password" id="password-input" placeholder="Senha" required>
+
+                                <img class="eye-icon" src="./imagens/versenha.png">
+                                <input type="password"  placeholder="Senha" required>
+                          
+
+
+                         
                         </div>
         
                         <div class="input-group">
-                            <input type="password" name="Confirmar a senha" placeholder="Confirmar a senha" required>
+                            <img class="eye-icon" onclick="seePassword('input-2')" class="eye-icon" src="./imagens/versenha.png">
+                            <input type="password"  name="Confirmar a senha" placeholder="Confirmar a senha" required>
                             
                         </div>  
 
                     </div>
 
-
-                    
-        
-                   
-    
-                   
-    
-                 
-                    
-                    
-    
                     
                     <div class="confirm-box">
                         <input type="checkbox" id="check-box" required>

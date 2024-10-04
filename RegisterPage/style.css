@@ -25,11 +25,13 @@ body {
   
 }
 
+
+
 .main-section {
     display: flex;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(165deg, var(--main-color), #5100ff);
+    background-color: var(--main-color);
 }
 
 .left-container {
@@ -48,9 +50,8 @@ body {
 }
 
 .top-left {
-    padding: 30px 1rem;
-    height: 10%;
-    margin-bottom: 30px;
+    padding: 7% 10%;
+    height: 20%;
 
 }
 
@@ -64,7 +65,10 @@ body {
 .top-left .img-logo{
     width: 100%;
     max-width: 300px;
+    margin-bottom: 1%;
 }
+
+
 
 .image-box {
     display: flex;
@@ -76,15 +80,15 @@ body {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    height: 90%;
+    height: 80%;
 
  
 }
 
 .image-box img {
-width: 100%;
-min-width: 400px;
-max-width: 450px;
+height: 100%;
+min-height: 400px;
+max-height: 100%;
 
 }
 
@@ -98,7 +102,7 @@ max-width: 450px;
 
 .title {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 
@@ -144,9 +148,14 @@ max-width: 450px;
 }
 
 .email-types p:hover {
-    color: var(--main-color);
+    color: #9705fe;
 }
 
+
+.view-password{
+    height: 10%;
+    width: 10%  ;
+}
 
 .confirm-box {
     margin: 30px 0;
@@ -161,27 +170,28 @@ max-width: 450px;
 
 .enviar-button {
     width: 100%;
-    height: 50px;
-    background: linear-gradient(165deg, var(--main-color), #5100ff);
+    height: 55px;
+    background: var(--main-color);
     border: none;
     color: white;
     font-size: 25px;
-    border-radius: 2px;
-    transition: color 0.3 ease;
-    opacity: 0.8;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .enviar-button:hover {
-   opacity: 1;
+   background-color: #9705fe;
+
 }
 
 .link-text {
-    color: var(--main-color);
+    color: #9705fe;
+    font-weight: bold;
+
 }
 
 .grudado-inputs {
-    margin-top: 30px;
+    margin-top: 7%;
 }
 
 .grudado-inputs .input-group:nth-of-type(1) input{ 
@@ -194,6 +204,20 @@ max-width: 450px;
  
 }
 
+
+.input-group {
+    position: relative;
+}
+
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
 .grudado-inputs .input-group:nth-of-type(2) input{ 
 
       border-top-left-radius: 0px; 
@@ -204,8 +228,14 @@ max-width: 450px;
  
 }
 
+@media(max-width:1500px) {
+    .left-container {
+        width: 43%;
+    } 
+}
 
-@media (max-width:830px) {
+
+@media (max-width:700px) {
     .left-container {
         display: none;
     }
@@ -215,3 +245,14 @@ max-width: 450px;
     }
 }
 
+@media (max-width:350px) {
+
+    .email-types {
+      display: none;
+    }
+
+    #date-input {
+        margin: 30px 0;
+    }
+
+}
