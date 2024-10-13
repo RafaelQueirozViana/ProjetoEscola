@@ -8,6 +8,7 @@ function addDomain(domain) {
 
     // Adiciona o novo domínio
     emailInput.value = emailValue + domain;
+    
 }
 
 
@@ -15,29 +16,29 @@ function addDomain(domain) {
 const passwordIcons = document.querySelectorAll(".eye-icon")
 
 
-
-passwordIcons.forEach(atualInput => {
-    let stage = "mostrar";
-
-    atualInput.addEventListener('click', function() {
+passwordIcons.forEach(currentButton => {
+    let mode = 1;
 
 
-    if(stage == "mostrar") {
-        stage = "ocultar"
-        input.type = "text";
+    currentButton.onclick = () => {
+        if(mode == 1) {
+            let input = currentButton.parentElement.querySelector('input');
+            input.type = "text";
+            mode++
+        }
+        else if(mode == 2) {
+            let input = currentButton.parentElement.querySelector('input');
+            input.type = "password";
+            mode--
+        }
 
-
+       
 
     }
-
-    else if(stage == "ocultar") {
-        stage = "mostrar"
-        alert("ocultu")
-      
-    }
-
-    })
-
+    
 })
+
+
+
 
 

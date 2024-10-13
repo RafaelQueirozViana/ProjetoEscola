@@ -206,6 +206,7 @@ max-height: 100%;
 
 
 .input-group {
+  
     position: relative;
 }
 
@@ -227,6 +228,31 @@ max-height: 100%;
     border-top: none;
  
 }
+
+#date-input {
+position: relative;
+    
+    
+}
+
+.icon-img {
+    position: absolute;
+    height: 30px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+#date-input::-webkit-calendar-picker-indicator {
+    display: none;
+} 
+    
+
+
+
+
 
 @media(max-width:1500px) {
     .left-container {
