@@ -135,3 +135,15 @@ bottom: -4px;
     border-radius: 3px;
     margin-top: 10px;
 }
+
+@media(max-width:650px) {
+    .top-container #join-txt {
+        display: none;
+
+    }
+
+    .top-container .title-txt {
+        font-size: 18px;
+        margin: 0;
+    }
+}
