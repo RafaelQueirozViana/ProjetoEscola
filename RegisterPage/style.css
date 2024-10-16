@@ -26,7 +26,6 @@ body {
 }
 
 
-
 .main-section {
     display: flex;
     width: 100%;
@@ -232,11 +231,6 @@ max-height: 100%;
 
 
 .input-group {
-    position: relative;
-}
-
-.banana {
-   
     position: relative;
 }
 
