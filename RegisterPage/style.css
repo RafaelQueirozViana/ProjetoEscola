@@ -96,6 +96,7 @@ max-height: 100%;
     display: flex;
     padding: 25px;
     justify-content: center;
+    overflow: auto;
     width: 67%;
     background-color: var(--second-color);
 }
@@ -120,14 +121,38 @@ max-height: 100%;
     color: white;
     font-size: 18px;
     outline: none;
+    transition: background-color 0.1s ease, border-color 0.2s ease-in-out;
+
+
+
 }
+
+.input-group input:hover {
+
+    border-color: rgb(143, 143, 143);
+}
+
+.input-group input:focus {
+    border: 2.5px solid #7600C8;
+    border-color: var(--main-color);
+    border-top-left-radius: 0px ; 
+    border-top-right-radius: 0px; 
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px; 
+    border-top: 2px solid #9705fe ;
+
+
+}
+
+
+
 
 #email-input {
     border-top-left-radius: 0px; 
     border-top-right-radius: 0px; 
     border-bottom-left-radius: 10px; 
     border-bottom-right-radius: 10px; 
-    border-top: none;
+ 
 }
 
 #join-text {
@@ -177,6 +202,7 @@ max-height: 100%;
     font-size: 25px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .enviar-button:hover {
@@ -206,7 +232,11 @@ max-height: 100%;
 
 
 .input-group {
-  
+    position: relative;
+}
+
+.banana {
+   
     position: relative;
 }
 
@@ -225,7 +255,18 @@ max-height: 100%;
     border-top-right-radius: 0px; 
     border-bottom-left-radius: 10px; 
     border-bottom-right-radius: 10px; 
-    border-top: none;
+  
+ 
+}
+
+.error-text {
+  
+   
+    margin: 10px 0;
+    color: rgb(206, 95, 95);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 10px;
  
 }
 
@@ -248,6 +289,12 @@ position: relative;
 #date-input::-webkit-calendar-picker-indicator {
     display: none;
 } 
+
+
+.enviar-button:disabled {
+    background-color: #53058a;
+    cursor: not-allowed;
+}
     
 
 

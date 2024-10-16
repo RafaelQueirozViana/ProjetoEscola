@@ -22,6 +22,7 @@ body {
     color: var(--font-color);
     min-height: 100vh;
     background: linear-gradient(180deg, #0a0b12, #191b27);
+    overflow-x: hidden;
 }
 
 ul,li,a {
@@ -30,7 +31,8 @@ ul,li,a {
 }
 
 .header, .main-container{
-    padding: 40px;
+    padding: 3rem;
+    
 }
 
 .main-section {
@@ -38,6 +40,7 @@ ul,li,a {
 }
 
 .header {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,10 +129,21 @@ ul,li,a {
     font-weight: 500;
 }
 
+.mobile-menu {
+    
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
 
+/*Tela de apostas */
 
 .main-content {
-    padding: 0 5%;
+    padding: 0 3%;
 
     width: 73%;
     height: 100%;
@@ -280,13 +294,41 @@ ul,li,a {
 .carrinho-container {
     width: 17%;
     min-width: 300px;
-    height: 100%;
+    height: 90%;
+
+
+   
  
 }
 
 .apostas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
     margin-top: 30px;
+    height: 100%;
+    padding-right: 20px;
+   
+}
 
+.apostas-container::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    background-color: #0a0b12;
+
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+}
+
+.apostas-container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: var(--second-color);
+  
+}
+
+div::-webkit-scrollbar-thumb:hover {
+    background-color: #850fd9; /* Cor do polegar ao passar o mouse */
 }
 
 .card-aposta {
@@ -323,4 +365,92 @@ ul,li,a {
     height: 40px;
     border-radius: 5px;
     background-color: var(--third-color);
+}
+
+.icons-nav {
+    display: none;
+}
+
+@media(max-width:1200px) {
+
+    .header, .main-container{
+        padding: 2rem;
+        padding-left: 20px;
+        
+    }
+
+    .mobile-menu {
+        display: block;  
+    }
+
+    .nav {
+   display: none;
+   
+    }
+
+    .icons-nav {
+        display: block;
+        width: 5%;
+       /* background: linear-gradient(180deg, #0a0b12, #1b1d27); */
+    
+    }
+
+    .main-content {
+        width: 78%;
+    }
+
+    .icons-nav .nav-container li {
+        
+        width: 40px;
+        background-image: url(./imagens/SearchIcon.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .icons-nav .nav-container a {
+        font-size: 0;
+        
+      
+        height: 100%;
+    }
+
+    .link-container {
+        position: relative;
+
+    }
+
+    .hover-box {
+      
+
+        transition: all 0.2s  ease;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 120%;
+        background-color: rgb(243, 243, 243);
+        padding: 2px;
+        border-radius: 3px;
+        width: max-content;
+        padding: 0 5px;
+        display: none;    
+     
+        height: 20px;
+      
+        
+    }
+
+    .hover-box p {
+      
+        color: rgb(4, 4, 4);
+        font-size: 14px;
+      
+    
+    }
+
+
+  
+
 }
