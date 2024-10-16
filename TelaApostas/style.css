@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +42,7 @@ ul,li,a {
 }
 
 .header {
+ 
 
     display: flex;
     align-items: center;
@@ -350,7 +353,7 @@ div::-webkit-scrollbar-thumb:hover {
 
 #aposted-time {
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
 
 }
 
@@ -369,88 +372,147 @@ div::-webkit-scrollbar-thumb:hover {
 
 .icons-nav {
     display: none;
+    width: 5%;
 }
+
+.main-content {
+    width: 78%;
+}
+
+.icons-nav .nav-container li {
+    background-color: transparent;
+    width: 40px;
+    background-image: url(./imagens/SearchIcon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.icons-nav .nav-container a {
+    font-size: 0;  
+    height: 100%;
+}
+
+.link-container {
+    position: relative;
+
+}
+
+.hover-box {
+    transition: all 0.2s  ease;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120%;
+    background-color: rgb(243, 243, 243);
+    padding: 2px;
+    border-radius: 3px;
+    width: max-content;
+    padding: 0 5px;
+    display: none;    
+ 
+    height: 20px;
+  
+    
+}
+
+.hover-box p {
+    color: rgb(4, 4, 4);
+    font-size: 14px;
+}
+
+.mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(180deg, #232431, #21232c);
+    position: fixed;
+    padding: 5px;
+    border-top: 1px solid #323b45;
+    display: none;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.link-content img {
+   
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.link-content p {
+    font-size: 14px;
+    color: #9f9f9f;
+}
+
+
+
+
 
 @media(max-width:1200px) {
 
+    .header {
+        border-bottom: 1px solid #191b27;
+    }
+
+    .nav {
+        display: none;
+        
+         }
+
     .header, .main-container{
         padding: 2rem;
-        padding-left: 20px;
-        
+        padding-left: 20px;       
     }
 
     .mobile-menu {
         display: block;  
     }
 
-    .nav {
-   display: none;
    
-    }
-
     .icons-nav {
         display: block;
-        width: 5%;
        /* background: linear-gradient(180deg, #0a0b12, #1b1d27); */
     
     }
+}
+
+
+@media(max-width:840px) {
+    .nav {
+        display: none;
+    }
+
+    .icons-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .carrinho-container {
+        display: none;
+    }
 
     .main-content {
-        width: 78%;
+        width: 100%;
     }
 
-    .icons-nav .nav-container li {
-        
-        width: 40px;
-        background-image: url(./imagens/SearchIcon.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-
-    .icons-nav .nav-container a {
-        font-size: 0;
-        
-      
-        height: 100%;
-    }
-
-    .link-container {
-        position: relative;
-
-    }
-
-    .hover-box {
-      
-
-        transition: all 0.2s  ease;
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 120%;
-        background-color: rgb(243, 243, 243);
-        padding: 2px;
-        border-radius: 3px;
-        width: max-content;
-        padding: 0 5px;
-        display: none;    
-     
-        height: 20px;
-      
-        
-    }
-
-    .hover-box p {
-      
-        color: rgb(4, 4, 4);
-        font-size: 14px;
-      
     
-    }
-
-
-  
 
 }
