@@ -45,6 +45,7 @@ ul,li,a {
 }
 
 .title-txt {
+   
     margin-left: 100px;
     font-size: 30px;
     font-weight: 700;
@@ -58,9 +59,9 @@ ul,li,a {
     position: absolute;
     bottom: 0;
     left: 0;
-
+   
     width: 100%;
-    height: 30%;
+    height: 38%;
 }
 
 .links-box {
@@ -143,7 +144,10 @@ bottom: -4px;
     }
 
     .top-container .title-txt {
-        font-size: 18px;
+        font-size: 22px;
         margin: 0;
     }
 }
+
+
+
