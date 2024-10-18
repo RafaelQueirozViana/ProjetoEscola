@@ -143,6 +143,11 @@ max-height: 100%;
 
 }
 
+.input-box {
+    position: relative;
+
+}
+
 
 
 
@@ -202,6 +207,7 @@ max-height: 100%;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 50px;
+    transition: all 0.1s ease-out;
 }
 
 .enviar-button:hover {
