@@ -87,7 +87,7 @@ enviarButton.addEventListener("click", (event) => {
         
         
     const inputRequirements = {
-        estaVazio : function() { if(currentInput.value == "") {this.estaVazio = false; return "O campo Data de nascimento está vazio"} else {this.estaVazio = true}},
+        estaVazio : function() { if(currentInput.value == "") {this.estaVazio = false; return "O campo Data de nascimento não pode ficar vazio"} else {this.estaVazio = true}},
         maiorIdade : function() { if( (currentYear - year) < 18 ) {this.maiorIdade= false; return "É necessário ter mais de 18 anos para criar uma conta"} else {this.maiorIdade = true;} },
       
       
