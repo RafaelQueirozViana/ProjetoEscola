@@ -22,11 +22,12 @@ img {
 body {
     font-family: "Nunito", sans-serif;
     color: var(--font-color);
-    min-height: 100vh;
+    min-height: 200vh;
 
     background: linear-gradient(180deg, #0a0b12, #191b27);
     overflow-x: hidden;
     padding-top: 10vh;
+    height: max-content;
 }
 
 ul,li,a {
@@ -249,22 +250,81 @@ ul,li,a {
     
 }
 
+.apostas-site-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.todas-apostar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   
+}
+
 .cards-container {
     width: 100%;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    user-select: none;
+
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
 
 
+
+.cards-container.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.cards-container.dragging .card {
+    pointer-events: none;
 }
 
 .cards-container .card {
-    width: 350px;
+    cursor: pointer;
+    object-fit: cover;
+    min-width: 350px;
     background-color: var(--main-color);
- 
-  
     padding: 15px 15px;
     border-radius: 5px;
+
+        user-select: none;
+
+    
+    
+}
+
+.tst {
+    position: absolute;
+    background-color: white;
+    width: max-content;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+    top: 50%;
+    height: 40px;
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+
+.tst:first-child {
+    display: none;
+    left: -23px;
+}
+
+.tst:last-child {
+    right: -23px;
 }
 
 .flex, .time {
@@ -317,27 +377,22 @@ ul,li,a {
     justify-content: center;
     width: calc(100% / 3 - 10px);
     height: 50px;
-    line-height: 25px;
+    line-height: 22px;
     background-color: var(--third-color);
     border-radius: 3px;
     text-align: center;
     margin-top: 10px;
     cursor: pointer;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 
 
 .aposta-button:hover {
-    opacity: 0.7;
+    background-color: var(--second-color);
 
 }
 
-.todas-apostar-container {
-    display: flex;
-    flex-direction: column;
-   
-}
 
 .next-card {
     display: flex;
@@ -358,12 +413,12 @@ ul,li,a {
 .carrinho-container {
   
   
-   z-index: 1000;
+
    
     width: 17%;
     min-width: 300px;
     height: 90%;
-    position: sticky;
+  
  
 }
 
@@ -384,6 +439,7 @@ ul,li,a {
     margin-top: 30px;
     height: 100%;
     padding-right: 20px;
+    
    
 }
 
@@ -456,7 +512,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 .main-content {
-    width: 78%;
+    width: 70%;
 }
 
 .icons-nav .nav-container li {
