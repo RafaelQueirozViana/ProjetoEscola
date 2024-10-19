@@ -387,7 +387,12 @@ input[type="number"]::-webkit-inner-spin-button {
         display: none;
     }
 
+
     .right-container {
+        width: 100%;
+    }
+
+    .input-container {
         width: 100%;
     }
 }
