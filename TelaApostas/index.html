@@ -11,21 +11,17 @@
         <header class="header">
 
             <div class="text-box">
-                <div class="mobile-menu"> 
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+               
 
                 <h1>GOLBET</h1>
             </div>
 
-       
-
-
         <div class="input-container">
-            <input type="text" >
-            <img src="./imagens/SearchIcon.png">
+            <div class="input-box">
+                <input type="text" >
+                <img src="./imagens/SearchIcon.png">
+            </div>
+         
         </div>
 
         <div class="icons-container">
@@ -36,14 +32,16 @@
             </ul>
         </div>
         </header>
+
         
 
         <div class="main-container">
-
-            <nav>
+        
+       
                 <div class="nav">
-                    <h1 class="marca-title">CAMPEONATOS</h1>
+              
                     <ul class="nav-container">
+                        <h1 class="marca-title">CAMPEONATOS</h1>
                         <li onclick="selectButton(this)" ><a  href="#">DESTAQUES</a></li>
                         <li onclick="selectButton(this)" ><a href="#">AO VIVO</a></li>
                         <li onclick="selectButton(this)" ><a href="#">BRASILEIRÃO</a></li>
@@ -124,7 +122,7 @@
     
                 </div>
 
-            </nav>
+        
 
           
 
@@ -169,7 +167,7 @@
                             </div>
     
                             <div class="flex">
-                                <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                                <p class="aposta-button">0.5x <br><span class="name-teams">CORINTHI..</span> </p>
                                 <p class="aposta-button">2x <br> EMPATE</p>
                                 <p class="aposta-button">5x <br> SÃO PAULO</p>
     
@@ -292,6 +290,7 @@
                         </div>
                       
                     </div>
+                    
 
                     
 
@@ -300,10 +299,9 @@
                   
                 </div>
 
+                <h1 class="tached-text">BRASILEIRÃO SÉRIE A</h1>
 
                 <div class="todas-apostar-container">
-                    
-                <h1 class="tached-text">APOSTE E DESCUBRA</h1>
                     <img id="left" class="tst" src="https://www.svgrepo.com/show/521480/arrow-prev.svg" alt="">
                   
 
@@ -450,6 +448,7 @@
                         </div>
                       
                     </div>
+                    
 
                     
 
@@ -457,6 +456,10 @@
                     <img id="right" src="https://www.svgrepo.com/show/521479/arrow-next-small.svg" class="tst">
                   
                 </div>
+
+
+
+               
 
                 </div>
 
@@ -469,40 +472,63 @@
             </main>
 
             <div class="carrinho-container">
-                <h1 class="tached-text">Carrinho de apostas</h1>
-
+              
+                
                 <div class="apostas-container">
+
+                    <!-- <div class="card-aposta vazio">
+
+                       
+                 
+                            <p id="adad" >Nenhuma aposta selecionada</p>
+
+                            <img src="https://superbet.com/static/federations/stats/img/ticket-light.93482082.svg" alt="">
+                         
+
+                            <p class="title-text" >As apostas futuras aparecerão aqui!</p>
+                            <p id="ad">Ir para histórico de apostas</p>
+
+                    </div> -->
+
+
                     <div class="card-aposta">
+                        <h1 class="tached-text" >Carrinho de Apostas</h1>
+                        
+                        <div class="main-div">
 
-                        <div class="flex">
-                            <p class="time-text" >CORINTHIAS</p>
-                            <p class="placar-text">6</p>
+                            <div class="flex">
+                                <p class="time-text" >CORINTHIAS</p>
+                                <p class="placar-text">6</p>
+                            </div>
+    
+                            <div class="flex">
+                                <p class="time-text" >SÃO PAULO</p>
+                                <p class="placar-text">6</p>
+                            </div>
+    
+                            <p id="aposted-time" class="placar-text">Apostou em: Corinthias</p>
+    
+                            <div class="flex">
+                                <p id="value-text" class="placar-text">Valor R$</p>
+                                <p>15,00</p>
+                            </div>
+    
+                            <div class="flex">
+                                <p >Valor Apostado:</p>
+                                <p>R$6,15</p>
+                            </div>
+    
+                            <div class="flex">
+                                <p>Ganho potencial:</p>
+                                <p>R$15,48</p>
+                            </div>
+    
+                            <p class="apostar-button">FAZER APOSTA</p>
+    
+
                         </div>
 
-                        <div class="flex">
-                            <p class="time-text" >SÃO PAULO</p>
-                            <p class="placar-text">6</p>
-                        </div>
-
-                        <p id="aposted-time" class="placar-text">Apostou em: Corinthias</p>
-
-                        <div class="flex">
-                            <p id="value-text" class="placar-text">Valor R$</p>
-                            <p>15,00</p>
-                        </div>
-
-                        <div class="flex">
-                            <p >Valor Apostado:</p>
-                            <p>R$6,15</p>
-                        </div>
-
-                        <div class="flex">
-                            <p>Ganho potencial:</p>
-                            <p>R$15,48</p>
-                        </div>
-
-                        <p class="apostar-button">FAZER APOSTA</p>
-
+                       
                     </div>
 
                    
@@ -512,12 +538,17 @@
                 </div>
     
             </div>
+            
+
+            
 
         </div>
 
+        
   
 
     
+      
            
 
  
@@ -525,7 +556,6 @@
 
     </section>
 
-    <div class="cad"></div>
 
     <script src="./javascriptFolder/nav-menu.js"></script>
     <script src="./javascriptFolder/header-fixo.js"></script>
