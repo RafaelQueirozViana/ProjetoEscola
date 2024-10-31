@@ -8,8 +8,8 @@
 }
 
 :root {
-    --main-color:#7600C8;
-    --second-color:#1F1F20;
+    --main-color:rgb(97, 0, 253);
+    --second-color:#0f1115;
     --third-color: #A6A6A6;
     --fonte-principal: "Nunito", sans-serif;
     --font-color:#fff;
