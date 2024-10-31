@@ -1,79 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Sign in & Sign up Form</title>
-  </head>
-  <body>
-
-      <div class="container">
-
-        <main class="main-section">
-          <div class="left-container">
-              <div class="top-container">
-                  <h1 id="da">GolBet</h1>
-  
-              </div>
-  
-              <div class="bottom-container">
-                  <img src="./Imagens/Player.png" alt="">
-              </div>
-        
-          </div>
-
-          <div class="right-container">
-            <div class="right-content">
-
-              <header class="header">
-                <ul class="header-container">
-  
-                  <li> <a href="#">Menu</a></li>
-                  <li> <a href="#">Apostar</a></li>
-                  <li> <a href="#">Carrinho</a></li>
-                  <li> <a href="#">Histórico</a></li>
-                  <li> <a href="#">Sua conta</a></li>
-                
-                </ul>
-              </header>
-  
-              <div class="text-box">
-                <h1>COMECE A APOSTAR <br> E GANHE BÔNUS</h1>
-                <a href="#">REGISTRAR-SE AGORA</a>
-              </div>
-
-            </div>
-        
-        
-          </div>
-
-          <div class="div-container">
-            <div class="div-">
-              
-            </div>
-          </div>
-
-    
-  
-        </main>
-   
-        <section class="second-section">
-            
-        </section>
-   
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>GOLBET | TELA DE APOSTAS </title>
+</head>
+<body>
+  <section class="main-section">
+    <header class="header">
+      <img class="logo-img" src="./Imagens/Logogolbet.header.png" >
+      <nav class="nav">
+        <a href="#">Apostar</a>
+        <a href="#">Histórico de Apostas</a>
+        <a href="#">Próximos jogos</a>
+        <a href="#">Depositar</a>
+        <a href="#"><img class="account-icon" src="./Imagens/iconeConta.png"></a>
+      </nav>
+    </header>
+    <main class="main-container">
+      <div class="text-box">
+        <h1 class="title">Onde cada <span class="purple-txt">Palpite</span> conta! <br>   <span class="sub-title">Sua chance, Seu jogo, <br> Sua <span class="purple-txt">Vitória!</span>  </span!</h1>
+      
       </div>
+      <div class="apostas-container">
+        <div class="aposta-card">
+          
+          <p class="paragraph-text" > <span class="purple-txt">Amanhã</span> <br> 25 agosto 2024, 16:00</p>
+          <div class="team-banner">
+
+            <div class="team-info">
+              <img src="./Imagens/corinthiasLogo.png">
+              <p>Casa 1.81</p>
+            </div>
+
+            <div class="team-info">
+              <p class="x-text">X</p>
+              <p class="empate-text" >Empate 3.62</p>
+            </div>
+
+            <div class="team-info">
+              <img src="./Imagens/corinthiasLogo.png">
+              <p >Casa 1.81</p>
+            </div>
+            
+          </div>
+          <a class="button" href="#">Comece a Apostar</a>
+          
+        </div>
+      </div>
+    </main>
+
+ 
+
+    <aside class="apostas-site-container">  
+      <h1 class="tached-text" >APOSTE E DESCUBRA</h1> 
+    <div class="todas-apostar-container">
+        <img id="left" class="tst" src="https://www.svgrepo.com/show/521480/arrow-prev.svg" alt="">
+        <div class="cards-container">       
+            <div class="card" draggable="false">
+                <div class="flex">
+                    <p class="live-text">AO VIVO</p>
+                    <p class="campeonat-title">Brasileirão Série A</p>
+                </div>
+
+                <p class="date-text">24/08</p>
+
+                <div class="time">
+                    <p>CORINTHIAS</p>
+                    <p class="placar-text">7</p>
+                </div>
+
+                <div class="time">
+                    <p>SÃO PAULO</p>
+                    <p class="placar-text">1</p>
+                </div>
+
+                <div class="flex">
+                    <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                    <p class="aposta-button">2x <br> EMPATE</p>
+                    <p class="aposta-button">5x <br> SÃO PAULO</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="card" draggable="false">
+              <div class="flex">
+                  <p class="live-text">AO VIVO</p>
+                  <p class="campeonat-title">Brasileirão Série A</p>
+              </div>
+
+              <p class="date-text">24/08</p>
+
+              <div class="time">
+                  <p>CORINTHIAS</p>
+                  <p class="placar-text">7</p>
+              </div>
+
+              <div class="time">
+                  <p>SÃO PAULO</p>
+                  <p class="placar-text">1</p>
+              </div>
+
+              <div class="flex">
+                  <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                  <p class="aposta-button">2x <br> EMPATE</p>
+                  <p class="aposta-button">5x <br> SÃO PAULO</p>
+
+              </div>
+
+
+          </div>
+
+            <div class="card" draggable="false">
+                <div class="flex">
+                    <p class="live-text">AO VIVO</p>
+                    <p class="campeonat-title">Brasileirão Série A</p>
+                </div>
+
+                <p class="date-text">24/08</p>
+
+                <div class="time">
+                    <p>CORINTHIAS</p>
+                    <p class="placar-text">7</p>
+                </div>
+
+                <div class="time">
+                    <p>SÃO PAULO</p>
+                    <p class="placar-text">1</p>
+                </div>
+
+                <div class="flex">
+                    <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                    <p class="aposta-button">2x <br> EMPATE</p>
+                    <p class="aposta-button">5x <br> SÃO PAULO</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="card" draggable="false">
+                <div class="flex">
+                    <p class="live-text">AO VIVO</p>
+                    <p class="campeonat-title">Brasileirão Série A</p>
+                </div>
+
+                <p class="date-text">24/08</p>
+
+                <div class="time">
+                    <p>CORINTHIAS</p>
+                    <p class="placar-text">7</p>
+                </div>
+
+                <div class="time">
+                    <p>SÃO PAULO</p>
+                    <p class="placar-text">1</p>
+                </div>
+
+                <div class="flex">
+                    <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                    <p class="aposta-button">2x <br> EMPATE</p>
+                    <p class="aposta-button">5x <br> SÃO PAULO</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="card" draggable="false">
+                <div class="flex">
+                    <p class="live-text">AO VIVO</p>
+                    <p class="campeonat-title">Brasileirão Série A</p>
+                </div>
+
+                <p class="date-text">24/08</p>
+
+                <div class="time">
+                    <p>CORINTHIAS</p>
+                    <p class="placar-text">7</p>
+                </div>
+
+                <div class="time">
+                    <p>SÃO PAULO</p>
+                    <p class="placar-text">1</p>
+                </div>
+
+                <div class="flex">
+                    <p class="aposta-button">0.5x <br> CORINTHI..</p>
+                    <p class="aposta-button">2x <br> EMPATE</p>
+                    <p class="aposta-button">5x <br> SÃO PAULO</p>
+
+                </div>
+
+
+            </div>
+          
+        </div>
+
+        <img id="right" src="https://www.svgrepo.com/show/521479/arrow-next-small.svg" class="tst">
+      
+    </div>
+
+
+
+     
+      
+  </aside>
+
 
 
    
-      
-      
-      
 
-  </body>
+    </div>
+
+    <footer class="footer">
+    <div class="top-footer">
+      <ul class="colum">
+        <h3>Jogos</h3>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Próximos Jogos</a></li>
+        <li><a href="#">Ao vivo</a></li>
+      </ul>
+
+      <ul class="colum">
+        <h3>Suporte</h3>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Próximos Jogos</a></li>
+        <li><a href="#">Ao vivo</a></li>
+      </ul>
+
+      <ul class="colum">
+        <h3>Termos</h3>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Próximos Jogos</a></li>
+      
+    
+      </ul>
+
+      <ul class="colum">
+        <h3>Sobre Nós</h3>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Próximos Jogos</a></li>
+       
+      </ul>
+    </div>
+
+    <div class="bottom-footer">
+      <img src="./Imagens/Logogolbet.rodape.png">
+      <p>© 2024 GolBet, Todos Direitos Reservados. </p>
+      <ul class="social-links">
+        <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
+        <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
+        <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
+      </ul>
+    </div>
+     
+    </footer>
+  </section>
+  
+</body>
 </html>
