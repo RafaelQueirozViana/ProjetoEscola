@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     font-family: "Poppins", serif;
     overflow-x: hidden;
+
 }
 ul,li,a {
     text-decoration: none;
@@ -31,12 +32,19 @@ ul,li,a {
    
 }
 
+
+
 .main-section {
     width: 100vw;
     min-height: 100vh;
     background-color: var(--primary-color);
+    overflow-x: hidden;
  
 }
+
+
+
+
 
 .header {
     display: flex;
@@ -49,13 +57,15 @@ ul,li,a {
     top: 0;
     z-index: 11111;
     background-color: var(--primary-color);
+
 }
-.logo-img {
-    height: 60px;
+
+.header .logo-img {
+    height: 50px;
+    margin-top: 10px;
 }
-.account-icon {
-    height: 40px;
-}
+
+
 
 .nav {
     display: flex;
@@ -66,7 +76,36 @@ ul,li,a {
 
 .nav a {
     font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+   
 }
+
+.nav a:hover {
+   color: #a7a1a1;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-box a:nth-child(-n + 2) {
+    display: none;
+}
+.img-box .account-icon {
+    height: 40px;
+
+}
+
+.img-box .carrinho-img {
+
+    height: 40px;
+}
+
+
+
 
 .main-container {
     display: flex;
@@ -76,9 +115,8 @@ ul,li,a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    height: 75vh;
-    padding: 0 var(--site-spacing);
+    height: max-content;
+    padding: 8.2% var(--site-spacing);
     position: relative;
  
 }
@@ -96,11 +134,15 @@ ul,li,a {
     z-index: 1111;
 }
 
+.text-box .button{
+display: none;
+}
+
 .title {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 500;
     text-align: center;
-    line-height: 50px;
+    line-height: 80px;
 }
 
 
@@ -111,7 +153,7 @@ ul,li,a {
 
 .sub-title {
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     text-align: center;
 }
 
@@ -144,10 +186,7 @@ ul,li,a {
     background: rgba(0, 0, 0, 0.405);
     filter: blur(50px);
     border-radius: 50px;
-  
-    z-index: -1;
-
-    
+    z-index: -1; 
 }
 
 
@@ -186,20 +225,36 @@ ul,li,a {
 .team-info img{
     height: 200px;
 }
+.button-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 .button {
-    
     display: flex;
     justify-self: center;
-    border: 2px solid;
+    border: 1px solid;
     border-color: rgb(97, 0, 253);
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    border-radius: 5px;
+    font-size: 24px;
+    
+    border-radius: 50px;
     margin-top: 20px;
     height: 50px;
     width: 80%;
+    transition: all 0.2s ease ;
+    background-color: rgba(97, 0, 253, 0.074);
+}
+
+.button:hover {
+    background-color: rgba(97, 0, 253, 0.846);
+   border-color: #313131;
+   box-shadow: rgba(97, 0, 253, 0.524) 0 0 20px 0;
+   transition: all .3 ease;
 }
 
 .footer {
@@ -208,11 +263,14 @@ ul,li,a {
     background-color: var(--terciary-color);
     padding: 5% 10%;
     min-height: 50vh;
+
+    margin-bottom: 62px;
 }
 
 .top-footer {
     display: flex;
     justify-content: space-between;
+    
     align-items: start;
     flex-wrap: wrap;
     gap: 2rem;
@@ -248,6 +306,10 @@ ul,li,a {
     gap: 20px;
 }
 
+.bottom-footer img{
+    height: 50px;
+}
+
 
 
 .social-links {
@@ -265,7 +327,7 @@ ul,li,a {
 
     display: flex;
     flex-direction: column;
-
+   
     padding: 0 var(--site-spacing);
 
 }
@@ -346,8 +408,7 @@ ul,li,a {
 
 
 .flex, .time {
-    position: sticky;
-    
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -363,6 +424,7 @@ ul,li,a {
     background-color: var(--second-color);
     padding: 3px 5px;
     width: max-content;
+    max-width: 80px;
     border-radius: 5px;
     margin-bottom: 8px;
 }
@@ -388,10 +450,12 @@ ul,li,a {
 .campeonat-title {
     font-size: 19px;
     color: rgba(255, 255, 255, 0.621);
+    text-align: end;
 }
 
 .aposta-button {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: calc(100% / 3 - 10px);
@@ -434,7 +498,7 @@ ul,li,a {
     position: relative;
     font-size: 25px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     
 }
 
@@ -442,7 +506,7 @@ ul,li,a {
     content: '';
     position: absolute;
     bottom: -10px;
-    width: 100%;
+    width: calc(100% + 5px);
     height: 3px;
     border-radius: 10px;
     background-color: var(--second-color);
@@ -455,6 +519,35 @@ ul,li,a {
  
 }
 
+.campeonats-container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: initial;
+    gap: 10px;
+    
+    width: 100%;
+    overflow-x: auto;
+}
+
+.campeonats-container::-webkit-scrollbar {
+    display: none; 
+  }
+
+.campeonats-container .nav-button {
+    background-color: var(--terciary-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    min-width: max-content;
+ 
+
+}
+
+
+.campeonats-container .nav-button:nth-child(1){
+    background-color: var(--second-color);
+}
+
+
 ::-webkit-scrollbar-track {
     background-color: var(--main-color);
 }
@@ -462,5 +555,276 @@ ul,li,a {
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5px;
+}
+
+
+
+.cookies-container {
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: var(--main-color);
+    padding: 2rem var(--site-spacing);
+    z-index: 1111;
+    box-shadow: rgb(21, 20, 20) 0 0 20px 0;
+    transition: opacity .4s ease;
+    border-top: 1px solid rgba(128, 128, 128, 0.101);
+    border-radius: 5px;
+  
+  
+}
+
+#buttons-container {
+    gap: 20px;
+    
+}
+
+.cookies-text {
+    
+    width: 100%;
+    font-size: 18px;
+
+    
+    
+}
+#accept-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-color);
+    padding: 10px 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+   
+}
+
+#reject-button {
+    cursor: pointer;
+    border: 1px solid var(--second-color);
+    padding: 5px 50px;
+    height: 40px;
+    border-radius: 5px;
+    color: #e8e8e8;
+    transition: all 0.3s ease;
+    opacity: 1;
+ 
+}
+
+#reject-button:hover {
+    opacity: .8;
+}
+
+
+.mobile-nav {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, #1c1d26, #21232c);
+    padding: .5rem 0;
+    border-top: 1px solid #323b45;
+    display: none;
+    z-index: 1111;
+}
+
+.link-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.link-content img {
+   
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.link-content p {
+    font-size: 13px;
+    color: #9f9f9f;
+    font-weight: 500;
+}
+
+
+
+
+
+@media(max-width:2000px) {
+
+    .title {
+        font-size: 3.5rem;
+        line-height: 60px;
+    }
+    
+ 
+    .sub-title {
+       
+        font-size: 2.5rem;
+
+    }
+ 
+}
+
+@media(max-width:1200px) {
+    .nav a{
+        display: none;
+    }
+
+    .img-box a{
+        display: flex !important;
+    }
+
+
+    
+}
+
+@media(max-width:750px) {
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+
+@media(max-width:1020px) {
+
+ :root {
+    --site-spacing: 2rem;
+}
+
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .sub-title {
+        display: none;
+     
+    }
+
+    .cookies-container {
+        flex-wrap: wrap;
+    }
+
+    #buttons-container {
+        width: 100%;
+        justify-content: end;
+    }
+
+}
+
+
+
+@media(max-width:485px) {
+
+    :root {
+        --site-spacing: 1rem;
+    }
+
+  
+    .main-container {
+        height: max-content;
+        padding-top: 50px ;
+        padding-bottom: 50px ;
+    }
+
+    .aposta-card {
+        display: none;
+    }
+
+    .title {
+        text-align: start;
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .sub-title {
+        display: block;
+        text-align: start;
+        font-size: 25px;
+        text-transform: capitalize;
+        line-height: 35px;
+        margin-top: 5px;
+        
+    }
+
+    .text-box .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   
+    }
+
+    
+
+
+
+
+    .card .flex:nth-child(1) {
+        flex-direction: column;
+        justify-content: initial;
+        align-items: baseline;
+       }
+
+       .ocult {
+        display: none;
+       }
+    
+    
+       .aposta-button {
+        width: calc(100% / 3 - 5px);
+        height: 40px;
+        line-height: 20px;
+       }
+    
+       .cards-container .card {
+        min-width: 100%;
+    }
+
+    #buttons-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    #accept-button {
+        width: 100%;
+    
+    }
+    
+    #reject-button {
+        width: 100%;
+        text-align: center;
+       
+    }
+
+
+  
 }
 

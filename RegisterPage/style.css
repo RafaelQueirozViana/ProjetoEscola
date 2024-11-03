@@ -57,7 +57,7 @@ body {
 .top-left p {
     font-size: 30px;
     margin-left: 25px;
-    font-weight: 700;
+    font-weight: 500;
     
 }
 
@@ -223,7 +223,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .link-text {
-    color: #9705fe;
+    color: var(--main-color);
     font-weight: bold;
 
 }
@@ -311,7 +311,11 @@ position: relative;
 @media(max-width:1500px) {
     .left-container {
         width: 43%;
+        
     } 
+    .top-left p {
+        font-size: 25px;
+    }
 }
 
 
