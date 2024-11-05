@@ -6,6 +6,7 @@ const passInput = document.querySelector("#pass-input");
 
 
 enviarButton.addEventListener("click", (event) => {
+
   
 
         let haveInvalidInput = false    
@@ -212,7 +213,8 @@ enviarButton.addEventListener("click", (event) => {
         if (inputRequirements[key] != true) {       
             haveInvalidInput = true;       
             haveInvalidNames = true;
-            document.querySelector("#pass-error").textContent = resultado;            
+            document.querySelector("#pass-error").textContent = resultado;    
+                    
         }
     }
 
@@ -243,12 +245,16 @@ enviarButton.addEventListener("click", (event) => {
         if (inputRequirements[key] != true) {       
             haveInvalidInput = true;       
             haveInvalidNames = true;
-            document.querySelector("#confirm-error").textContent = resultado;            
+            document.querySelector("#confirm-error").textContent = resultado; 
+           document.querySelector(".enviar-button").backgroundColor = "red"
+            document.body.backgroundColor = "red"         
         }
     }
 
     if(haveInvalidNames == false) {
         document.querySelector("#confirm-error").textContent = "";
+             document.querySelector(".enviar-button").backgroundColor = "red"
+        
     }
 
 
