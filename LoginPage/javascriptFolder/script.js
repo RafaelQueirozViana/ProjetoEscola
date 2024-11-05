@@ -8,12 +8,12 @@ passwordIcons.forEach(currentButton => {
             let input = currentButton.parentElement.querySelector('input');
             input.type = "text";
             mode++
-            currentButton.src = "../RegisterPage/imagens/eyeIPasswordcon.png"
+            currentButton.src = "./imagens/close-eyes.png"
         }
         else if(mode == 2) {
             let input = currentButton.parentElement.querySelector('input');
             input.type = "password";
-            currentButton.src = "../RegisterPage/imagens/versenha.png"
+            currentButton.src = "./imagens/open-eyes.png"
             mode--
         }
 

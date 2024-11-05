@@ -9,7 +9,7 @@
 
 :root {
     --main-color:rgb(97, 0, 253);
-    --second-color:#0f1115;
+    --second-color:#16181d;
     --third-color: #A6A6A6;
     --fonte-principal: "Nunito", sans-serif;
     --font-color:#fff;
@@ -56,7 +56,7 @@ body {
 
 .top-left p {
     font-size: 30px;
-    margin-left: 25px;
+    margin-left: 5px;
     font-weight: 500;
     
 }
@@ -214,13 +214,20 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 50px;
-    transition: all 0.1s ease-out;
+    transition: all .3s ease-out;
+    
 }
 
 .enviar-button:hover {
-   background-color: #9705fe;
+   background-color: rgb(134, 5, 254);
 
 }
+
+.enviar-button:disabled {
+    background-color: rgba(79, 32, 153, 0.954);
+    cursor: not-allowed;
+}
+    
 
 .link-text {
     color: var(--main-color);
@@ -229,7 +236,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .grudado-inputs {
-    margin-top: 7%;
+    margin-top: 20px;
 }
 
 .grudado-inputs .input-group:nth-of-type(1) input{ 
@@ -250,7 +257,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .eye-icon {
     cursor: pointer;
     position: absolute;
-    height: 30px;
+    height: 27px;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
@@ -298,11 +305,7 @@ position: relative;
 } 
 
 
-.enviar-button:disabled {
-    background-color: #53058a;
-    cursor: not-allowed;
-}
-    
+
 
 
 
