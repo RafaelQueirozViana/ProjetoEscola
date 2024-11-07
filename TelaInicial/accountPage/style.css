@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+a,ul,li {
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color:#0d111d;
+    --secondary-color:#20242f;
+    --site-spacing: 2rem;
+    --paragraph-color: #adadad;
+}
+
+img {
+    height: 40px;
+}
+
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Nunito", sans-serif;
+}
+
+
+.site-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.lateral-navigation {
+    width: 15%;
+    min-width: 250px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding: 1.5rem var(--site-spacing);
+}
+
+.top-nav {
+    
+    height: 85%;
+}
+
+.bottom-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: end;
+ 
+    height: 15%;
+}
+
+.account-card .other-subtitle {
+    margin-top: 10px;
+}
+
+.account-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+   
+}
+
+.title {
+    font-weight: 600;
+}
+
+.other-subtitle {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 25px;
+ 
+ 
+}
+
+.paragraph-text {
+    color: var(--paragraph-color);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--paragraph-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+  
+}
+
+.nav-button:hover {
+    background-color: #262a35;
+    
+}
+
+
+.nav-button img {
+    height: 30px;
+}
+
+.nav-button p{
+   
+    color: var(--paragraph-color);
+  
+}
+
+
+
+.right-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 85%;
+    height: 100%;
+    padding: 1.5rem var(--site-spacing);
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    width: 50%;
+    min-width: 750px;
+
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.234);
+
+}
+
+.text-box p{
+    color: var(--paragraph-color);
+    padding-left: 5px;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+.input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 750px;
+    position: relative;
+    height: 40px;
+ 
+ 
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    border: none;
+    padding: 0 2.5rem;
+    font-size: 18px;
+    color: var(--paragraph-color);
+    border: 1px solid rgba(128, 128, 128, 0.135);
+    outline: none;
+    transition: all 0.2s ease;
+
+}
+
+.input-box input:focus { 
+    border-color:  rgba(128, 128, 128, 0.619);
+}
+
+
+
+.input-box img {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    height: 25px;
+    
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.manage-content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.096);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.096);
+    padding: 20px 0;
+    margin: 10px 0;
+  
+}

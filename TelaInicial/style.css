@@ -267,9 +267,11 @@ display: none;
    transition: all .3 ease;
 }
 
+
+
 .footer {
     width: 100%;
-    margin-top: 50px;
+    
     background-color: var(--terciary-color);
     padding: 5% 10%;
     min-height: 50vh;
@@ -305,11 +307,13 @@ display: none;
 
 .colum a {
     color: rgb(149, 149, 149);
+    transition: color .3s ease;
  
 }
 
 .colum a:hover {
     text-decoration: underline;
+    color: white;
 }
 
 .bottom-footer {
@@ -556,6 +560,7 @@ display: none;
     padding: 5px 15px;
     border-radius: 15px;
     min-width: max-content;
+    cursor: pointer;
  
 
 }
@@ -904,7 +909,7 @@ right: -5px;
         font-size: 25px;
         text-transform: capitalize;
         line-height: 35px;
-        margin-top: 5px;
+        margin-top: 10px;
         
     }
 
@@ -960,6 +965,10 @@ right: -5px;
         width: 100%;
         text-align: center;
        
+    }
+
+    .button {
+        margin-top: 40px;
     }
 
 
