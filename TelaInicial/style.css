@@ -361,6 +361,11 @@ display: none;
    
 }
 
+.top-account .email-text {
+    font-size: 16px;
+    color: #acacac;
+}
+
 .cards-container {
     width: 100%;
     display: flex;

@@ -10,12 +10,18 @@
     <main class="site-container">
         <nav class="lateral-navigation">
             <div class="top-nav">
+             
                 <div class="account-card">
+                    
                     <img src="../Imagens/user.png" >
+                    
                     <div>
                         <p class="other-subtitle">Nome Usuário</p>
                         <p class="paragraph-text">emailuser@gmail.com</p>
+                        
                     </div>
+                
+                   
                    
                 </div>
     
@@ -93,17 +99,65 @@
                     <p>Gerencie seus dados e preferências pessoais aqui.</p>
                 </div>
 
+                <h1 class="subtitle">Meu Perfil</h1>
+
                 <div class="profile-manage">
-                    <h2 class="subtitle">Meu Perfil</h2>
+                   
                     <div class="manage-content">
                         <h1 class="other-subtitle">Nome de usuário:</h1>
                         <div class="flex">
-                            <p>Lucas Moreira</p>
-                            <p>Editar</p>
+                            <p class="grey-txt">Lucas Moreira</p>
+                            <p  class="purple-text">Editar</p>
                         </div>
                     
                     </div>
+
+                  
+
+                    <div class="manage-content">
+                        <div>
+                            <p class="other-subtitle">Foto de perfil</p>
+                            <p class="grey-txt">Personalize seu perfil com uma foto!</p>
+                        </div>
+                   
+                        
+                        <div class="flex">
+                            <img class="account-img" src="../Imagens/user.png">
+                            <div class="group">
+                                <p class="delete-button">Deletar</p>
+                                <p class="purple-text">Editar</p>
+                            </div>
+                          
+                        </div>
+                    
+                    </div>
+
+                    <div class="manage-content">
+                        <p class="other-subtitle">Telefone:</p>
+                        <div class="flex">
+                            <p class="grey-txt">(55) 11 92323-2323</p>
+                            <p class="purple-text">Editar</p>
+                        </div>
+                    
+                    </div>
+
+                    <div class="manage-content">
+                        <p class="other-subtitle">Senha:</p>
+                        <div class="flex">
+                            <p class="grey-txt">********</p>
+                            <div  class="group">
+                              
+                                <p id="da" class="purple-text">Editar</p>
+                            </div>
+                        
+                        </div>
+                    
+                    
+                  
+                    </div>
                 </div>
+
+              
 
 
             </div>
@@ -122,6 +176,35 @@
 
     </main>
 
-    
+    <div class="change-pass-popup">
+        <p class="close-button">X</p>
+        <p class="title">Editar Senha</p>
+
+        <div class="inputs-container">
+            
+        <div class="input-bo">
+            <input type="text" placeholder="Senha Atual">
+            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+        </div>
+
+        
+        <div class="input-bo">
+            <input type="text" placeholder="Nova Senha">
+            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+        </div>
+
+        <div class="input-bo">
+            <input type="text" placeholder="Repita a Nova Senha">
+            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+        </div>
+
+        <button class="button">Salvar</button>
+
+
+    </div>
+
+    </div>
+
+    <script src="./javascriptFolder/passwordPopup.js"></script>
 </body>
 </html>
