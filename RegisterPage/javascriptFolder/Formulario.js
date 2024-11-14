@@ -1,22 +1,17 @@
 
-
+const form = document.getElementById('form');
 const Registerinputs = document.querySelectorAll(".input-group input");
 const enviarButton = document.querySelector(".enviar-button");
 const passInput = document.querySelector("#pass-input");
 
 
+
+
 enviarButton.addEventListener("click", (event) => {
-
-  
-
-        let haveInvalidInput = false    
-
+    let totalValidInputs = 0;
     Registerinputs.forEach(currentInput => {
 
-        let TotalErrors = 0
-
- 
-        if(currentInput.placeholder.includes("Nome")) {
+    if(currentInput.placeholder.includes("Nome")) {
            const inputRequirements = {
             maxCaracteres : function() { if(currentInput.value.length > 15) { this.maxCaracteres = false; return `O campo nome pode ter no máximo 15 letras `} else {this.maxCaracteres = true;} },
             minCaracteres : function() { if(currentInput.value.length < 5) { this.minCaracteres = false; return `O campo nome precisa ter no mínimo 5 letras `} else {this.minCaracteres = true;}},     
@@ -32,12 +27,13 @@ enviarButton.addEventListener("click", (event) => {
                 haveInvalidInput = true;       
                 haveInvalidNames = true;
                 document.querySelector("#name-error").textContent = resultado;  
-                TotalErrors++          
+            
             }
         }
 
         if(haveInvalidNames == false) {
             document.querySelector("#name-error").textContent = "";
+            totalValidInputs++
         }
  
     }
@@ -49,7 +45,6 @@ enviarButton.addEventListener("click", (event) => {
         
         const inputRequirements = {
             
-          
             maxCaracteres : function() { if(currentInput.value.length > 45) { this.maxCaracteres = false; return `O campo email pode ter no máximo 25 letras `} else {this.maxCaracteres = true;} },
             charNeed : function() { if(currentInput.value.includes("@")) { this.needHave = true}  else {this.needHave = false; return "Insira um email válido"}   },
             minCaracteres : function() { if(currentInput.value.length < 5) { this.minCaracteres = false; return `O campo email precisa ter no mínimo 10 letras `} else {this.minCaracteres = true;}},
@@ -65,12 +60,13 @@ enviarButton.addEventListener("click", (event) => {
                 haveInvalidInput = true;       
                 haveInvalidNames = true;
                 document.querySelector("#email-error").textContent = resultado;  
-                TotalErrors++          
+                 
             }
         }
 
         if(haveInvalidNames == false) {
             document.querySelector("#email-error").textContent = "";
+            totalValidInputs++
         }
 
 
@@ -112,6 +108,7 @@ enviarButton.addEventListener("click", (event) => {
 
     if(haveInvalidNames == false) {
         document.querySelector("#date-error").textContent = "";
+        totalValidInputs++
     }
 
     
@@ -144,13 +141,14 @@ enviarButton.addEventListener("click", (event) => {
     
             if (inputRequirements[key] != true) {       
                 haveInvalidInput = true;       
-                haveInvalidNames = true;
+              
                 document.querySelector("#cpf-error").textContent = resultado;            
             }
         }
 
         if(haveInvalidNames == false) {
             document.querySelector("#cpf-error").textContent = "";
+            totalValidInputs++
         }
 
 
@@ -184,6 +182,7 @@ enviarButton.addEventListener("click", (event) => {
 
     if(haveInvalidNames == false) {
         document.querySelector("#tel-error").textContent = "";
+        totalValidInputs++
     }
 
 
@@ -220,6 +219,7 @@ enviarButton.addEventListener("click", (event) => {
 
     if(haveInvalidNames == false) {
         document.querySelector("#pass-error").textContent = "";
+        totalValidInputs++
     }
 
 
@@ -254,6 +254,7 @@ enviarButton.addEventListener("click", (event) => {
     if(haveInvalidNames == false) {
         document.querySelector("#confirm-error").textContent = "";
              document.querySelector(".enviar-button").backgroundColor = "red"
+             totalValidInputs++
         
     }
 
@@ -263,10 +264,15 @@ enviarButton.addEventListener("click", (event) => {
 
     })
 
+    console.log(totalValidInputs)
 
 
 
 
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+    
+    });
 
 
 

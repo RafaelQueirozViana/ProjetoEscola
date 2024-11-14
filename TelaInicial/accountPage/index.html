@@ -13,7 +13,7 @@
              
                 <div class="account-card">
                     
-                    <img src="../Imagens/user.png" >
+                    <img class="account-img" src="https://www.pellarin.com.br/wp-content/uploads/2022/08/artigoBannerMobile767x716_homem-com-papada-como-eliminar.jpg" >
                     
                     <div>
                         <p class="other-subtitle">Nome Usuário</p>
@@ -104,10 +104,10 @@
                 <div class="profile-manage">
                    
                     <div class="manage-content">
-                        <h1 class="other-subtitle">Nome de usuário:</h1>
+                        <h1 class="other-subtitle" >Nome de usuário:</h1>
                         <div class="flex">
-                            <p class="grey-txt">Lucas Moreira</p>
-                            <p  class="purple-text">Editar</p>
+                            <p class="grey-txt" id="username-text">Lucas Moreira</p>
+                            <p id="username-edit" class="purple-text">Editar</p>
                         </div>
                     
                     </div>
@@ -122,21 +122,23 @@
                    
                         
                         <div class="flex">
-                            <img class="account-img" src="../Imagens/user.png">
+                            <img class="account-img" id="photo" src="https://www.pellarin.com.br/wp-content/uploads/2022/08/artigoBannerMobile767x716_homem-com-papada-como-eliminar.jpg">
                             <div class="group">
                                 <p class="delete-button">Deletar</p>
-                                <p class="purple-text">Editar</p>
+                                <label id="upload-btn" class="purple-text" for="file">Mudar foto</label>
+                                <input  type="file" id="file">
+                           
                             </div>
                           
                         </div>
-                    
+                 
                     </div>
 
                     <div class="manage-content">
                         <p class="other-subtitle">Telefone:</p>
                         <div class="flex">
-                            <p class="grey-txt">(55) 11 92323-2323</p>
-                            <p class="purple-text">Editar</p>
+                            <p class="grey-txt" id="tel-text">(55) 11 92323-2323</p>
+                            <p class="purple-text" id="tel-edit">Editar</p>
                         </div>
                     
                     </div>
@@ -147,19 +149,11 @@
                             <p class="grey-txt">********</p>
                             <div  class="group">
                               
-                                <p id="da" class="purple-text">Editar</p>
-                            </div>
-                        
-                        </div>
-                    
-                    
-                  
+                                <p id="pass-edit" class="purple-text">Editar</p>
+                            </div>                     
+                        </div>         
                     </div>
                 </div>
-
-              
-
-
             </div>
 
          
@@ -176,35 +170,80 @@
 
     </main>
 
-    <div class="change-pass-popup">
-        <p class="close-button">X</p>
-        <p class="title">Editar Senha</p>
-
-        <div class="inputs-container">
+    <div class="popup-container">
+        <div class="change-popup" id="pass-popup">
+            <p class="close-button">X</p>
+            <p class="title">Editar Senha</p>
+    
+            <div class="inputs-container">
+                
+            <div class="input-bo">
+                <input type="text" placeholder="Senha Atual">
+                <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+            </div>
+    
             
-        <div class="input-bo">
-            <input type="text" placeholder="Senha Atual">
-            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+            <div class="input-bo">
+                <input type="text" placeholder="Nova Senha">
+                <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+            </div>
+    
+            <div class="input-bo">
+                <input type="text" placeholder="Repita a Nova Senha">
+                <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+            </div>
+    
+            <button class="button">Salvar</button>
+    
+    
+        </div>
+    
+        </div>
+    
+        <div class="change-popup" id="username-popup">
+            <p class="close-button">X</p>
+            <p class="title">Editar Nome de exibição</p>
+    
+            <div class="inputs-container">
+                
+            <div class="input-bo">
+                <input type="text" id="user-input" placeholder="Digite seu novo nome">
+            </div>
+    
+         
+            <button class="button" id="username-enviar">Salvar</button>
+    
+    
+        </div>
+    
         </div>
 
-        
-        <div class="input-bo">
-            <input type="text" placeholder="Nova Senha">
-            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+        <div class="change-popup" id="tel-popup">
+            <p class="close-button">X</p>
+            <p class="title">Editar número de telefone</p>
+    
+            <div class="inputs-container">
+                
+            <div class="input-bo">
+                <input type="text" id="tel-input" value="(55) ">
+            </div>
+    
+         
+            <button class="button" id="tel-enviar">Salvar</button>
+    
+    
         </div>
-
-        <div class="input-bo">
-            <input type="text" placeholder="Repita a Nova Senha">
-            <img src="https://jonbet.com/static/media/eye.fdf3ae46.svg">
+    
         </div>
-
-        <button class="button">Salvar</button>
-
-
     </div>
 
-    </div>
+
+
+   
 
     <script src="./javascriptFolder/passwordPopup.js"></script>
+    <script src="./javascriptFolder/usernamePopup.js"></script>
+    <script src="./javascriptFolder/telPopup.js"></script>
+    <script src="./javascriptFolder/importPhoto.js"></script>
 </body>
 </html>

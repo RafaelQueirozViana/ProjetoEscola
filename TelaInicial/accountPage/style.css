@@ -19,9 +19,6 @@ a,ul,li {
     --paragraph-color: #adadad;
 }
 
-img {
-    height: 40px;
-}
 
 
 body {
@@ -94,13 +91,17 @@ body {
    
 }
 
+
 .title {
     font-weight: 600;
 }
 
 .account-img {
+   
     height: 60px;
+    width: 60px;
     margin-top: 10px;
+    border-radius: 50%;
 }
 
 .other-subtitle {
@@ -292,7 +293,7 @@ body {
 }
 
 
-.change-pass-popup {
+.change-popup {
     position: relative;
     position: absolute;
     top: 50%;
@@ -300,24 +301,34 @@ body {
     width: 400px;
     padding: 1rem;
     border-radius: 5px;
-    height: 400px;
+    height: max-content;
+    padding-bottom: 30px;
     background-color: #262a35;
     box-shadow: rgba(0, 0, 0, 0.728) 0 0 20px 0;
     transition: all .3s ease;
     transform: translate(-50%, -50%) scale(1.2);
     opacity: 0;
     z-index: 11111;
+    display: none;
+  
+  
  
 }
 
 
 
-.change-pass-popup.open{
+.change-popup.open{
+    display: block;
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
 
-.change-pass-popup .close-button {
+
+.change-popup.close{
+    opacity: 0;
+}
+
+.change-popup .close-button {
     display: flex;
     align-self: flex-end;
     justify-self: end;
@@ -328,7 +339,7 @@ body {
  
 }
 
-.change-pass-popup .title {
+.change-popup .title {
     font-size: 22px;
     display: flex;
     justify-self: center;
@@ -394,6 +405,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
    
     width: 100%;
     margin-top: 10px;
@@ -407,6 +419,10 @@ body {
   
 }
 
+
+#file {
+    display: none;
+}
 @media(max-width:1060px) {
     .right-container {
         width: 100%;
