@@ -10,12 +10,17 @@
     <main class="site-container">
         <nav class="lateral-navigation">
             <div class="top-nav">
-             
+            
+                <p class="back-button">X</p>
+
+              
                 <div class="account-card">
+                    
                     
                     <img class="account-img" src="https://www.pellarin.com.br/wp-content/uploads/2022/08/artigoBannerMobile767x716_homem-com-papada-como-eliminar.jpg" >
                     
                     <div>
+                        
                         <p class="other-subtitle">Nome Usuário</p>
                         <p class="paragraph-text">emailuser@gmail.com</p>
                         
@@ -85,7 +90,13 @@
 
             <div class="right-container">
                 <header class="header">
+                    <div class="open-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                     <div class="input-box">
+                  
                         <img src="../Imagens/searchIcon.png">
                         <input type="text" placeholder="Pesquisar nas configurações ">
                     </div>
@@ -117,7 +128,7 @@
                     <div class="manage-content">
                         <div>
                             <p class="other-subtitle">Foto de perfil</p>
-                            <p class="grey-txt">Personalize seu perfil com uma foto!</p>
+                            <p id="text" class="grey-txt">Personalize seu perfil com uma foto!</p>
                         </div>
                    
                         
@@ -137,7 +148,7 @@
                     <div class="manage-content">
                         <p class="other-subtitle">Telefone:</p>
                         <div class="flex">
-                            <p class="grey-txt" id="tel-text">(55) 11 92323-2323</p>
+                            <p class="grey-txt" id="tel-text">+55 (11) 92323-2323</p>
                             <p class="purple-text" id="tel-edit">Editar</p>
                         </div>
                     
@@ -162,6 +173,7 @@
 
             </div>
 
+          
 
         
         
@@ -225,7 +237,7 @@
             <div class="inputs-container">
                 
             <div class="input-bo">
-                <input type="text" id="tel-input" value="(55) ">
+                <input type="text" id="tel-input" placeholder="Digite seu número junto com o código DDD">
             </div>
     
          
@@ -245,5 +257,6 @@
     <script src="./javascriptFolder/usernamePopup.js"></script>
     <script src="./javascriptFolder/telPopup.js"></script>
     <script src="./javascriptFolder/importPhoto.js"></script>
+    <script src="./javascriptFolder/lateralMenu.js"></script>
 </body>
 </html>

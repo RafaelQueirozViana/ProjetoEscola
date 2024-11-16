@@ -8,18 +8,53 @@ const passwordInput = document.querySelector("#pass-input");
 const confPassInput = document.querySelector("#confirm-pass");
 const enviarButton = document.querySelector(".enviar-button");
 
+const nameErrorLabel = document.querySelector("#name-error")
+const emailErrorLabel = document.querySelector("#email-error")
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-   });  
+const datelErrorLabel = document.querySelector("#date-error")
 
-function preventFormSubmit(e) {
-    e.preventDefault();
-}
+const cpfErrorLabel = document.querySelector("#cpf-error")
+
+const telErrorLabel = document.querySelector("#tel-error")
+
+const passErrorLabel = document.querySelector("#pass-error")
+
+const confirmPassErrorLabel = document.querySelector("#confirm-error")
+const campoPass = document.getElementById("pass-campo");
+
+
 
 enviarButton.addEventListener("click", () => {
+   
+    let podeEnviar = verifyFunction(); 
 
-    let allValid = true;
+    console.log(podeEnviar)
+
+
+
+
+
+
+    form.addEventListener('submit', function (evento) {
+      if (podeEnviar == false) {
+        evento.preventDefault();
+      } else {
+    
+      form.submit();
+      }
+    });
+        
+    
+
+
+
+
+})
+
+
+let verifyFunction = () => {
+    let haveError = false
+   
 
     const currentYear = 2024;
     const year = new Date(dateInput.value).getFullYear();
@@ -35,6 +70,7 @@ enviarButton.addEventListener("click", () => {
         maxCaracteres : function() { if(emailInput.value.length > 45) { this.maxCaracteres = false; return `O campo email pode ter no máximo 25 letras `} else {this.maxCaracteres = true;} },
         charNeed : function() { if(emailInput.value.includes("@")) { this.charNeed = true}  else {this.charNeed = false; return "Insira um email válido"}   },
         minCaracteres : function() { if(emailInput.value.length < 5) { this.minCaracteres = false; return `O campo email precisa ter no mínimo 10 letras `} else {this.minCaracteres = true;}}, 
+   
     },  
         dateRequirements = {
         estaVazio : function() { if(dateInput.value == "") {this.estaVazio = false; return "O campo Data de nascimento não pode ficar vazio"} else {this.estaVazio = true}},
@@ -70,29 +106,78 @@ enviarButton.addEventListener("click", () => {
     ]
 
 
+    let todosVerdadeiros = true; // Variável para rastrear o estado geral
 
-
-    inputRequirements.forEach(requirements => {
-    
-        Object.values(requirements).forEach(checkFunction => {
-        
-            const result = checkFunction();
-            if (result !== undefined) {
-                console.log(result);
-                allValid = false;
+    for (const requirementObj of inputRequirements) {
+        for (const key in requirementObj) {
+            if (typeof requirementObj[key] === "function") {
+                const result = requirementObj[key](); // Executa a função
+                if (requirementObj[key] === false) {
+                    todosVerdadeiros = false; // Atualiza se algum for falso
+                }
+                if (result) {          
+         
+                    ShowMessageLabel(result)
+                }
             }
-        });
-    });
+        }
+    }
 
-    if (allValid) {
-        form.removeEventListener('submit', preventFormSubmit);
-    } 
+    if (todosVerdadeiros) {
+        console.log("Todos os valores deram verdadeiros");
+        return true
+    } else {
+        return false
+        console.log("Algum deu o valor false");
+    }
   
 }
 
+let ShowMessageLabel = (message) => {
 
-)
+    if(message.includes("nome")) {
 
+       nameErrorLabel.textContent = message;
+    }
+
+    
+
+    
+    
+
+    if(message.includes("email")) {
+       emailErrorLabel.textContent = message;
+     }
+
+     if(message.includes("data") || message.includes("idade")) {
+        datelErrorLabel.textContent = message;
+      }
+     
+      
+      if(message.includes("CPF")) {
+        cpfErrorLabel.textContent = message;
+        campoPass.style.marginTop = "2%"
+      }
+     
+      
+      if(message.includes("tel")) {
+        telErrorLabel.textContent = message;
+        campoPass.style.marginTop = "3%"
+      }
+
+      if(message.includes("senha") && !(message.includes("confirmar"))) {
+        passErrorLabel.textContent = message;
+      }
+
+      if(message.includes("confirmar")) {
+        confirmPassErrorLabel.textContent = message;
+      }
+
+      console.log("a partir dq" + message)
+      
+  
+    console.log(message)
+}
 
 
 

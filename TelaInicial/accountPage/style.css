@@ -48,17 +48,47 @@ body {
 
 }
 
+.open-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 22px;
+    margin-right: 10px;
+    padding: 10px;
+    box-sizing: initial;
+    border: 1px solid rgba(128, 128, 128, 0.135);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    display: none;
+    
+}
+
+.open-menu .line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(187, 187, 187);
+  
+}
+
 .lateral-navigation {
     width: 15%;
-    min-width: 250px;
+    min-width: 320px;
     height: 100%;
     background-color: var(--secondary-color);
     padding: 1.5rem ;
     border-right: 1px solid rgba(128, 128, 128, 0.123);
+
+    transition: transform .3s ease;
+    
+}
+
+.lateral-navigation.open {
+    transform: translateX(0%);
 }
 
 
 .top-nav {
+    position: relative;
     
     height: 85%;
 }
@@ -233,7 +263,7 @@ body {
     height: 100%;
     background-color: var(--secondary-color);
     border-radius: 5px;
-    border: none;
+
     padding: 0 2.5rem;
     font-size: 18px;
     color: var(--paragraph-color);
@@ -329,6 +359,7 @@ body {
 }
 
 .change-popup .close-button {
+ 
     display: flex;
     align-self: flex-end;
     justify-self: end;
@@ -423,7 +454,27 @@ body {
 #file {
     display: none;
 }
-@media(max-width:1060px) {
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262a35;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.135);
+    cursor: pointer;
+    display: none;
+}
+
+#text {
+    margin-right: 15px;
+}
+
+
+@media(max-width:1160px) {
     .right-container {
         width: 100%;
         min-width: 0px;
@@ -439,7 +490,7 @@ body {
        left: 0;
        bottom: 0;
        z-index: 1111;
-       width: 80%;
+      
     }
 
     .right-frame {
@@ -450,9 +501,18 @@ body {
 
     .flex {
         width: 100%;
-   
         justify-content: space-between;
     } 
+
+    .lateral-navigation {   
+        transform: translateX(-100%);   
+    }
+
+    .open-menu, .back-button { 
+        display: flex;      
+    }
+
+
 
   
 }

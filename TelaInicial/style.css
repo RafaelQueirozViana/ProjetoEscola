@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -12,7 +12,7 @@
     --main-color:#13161d;
     --primary-color: #0f1115;
     --second-color :rgb(97, 0, 253);
-    --site-spacing: 4rem;
+    --site-spacing: 6rem;
     --terciary-color: #16181c;
 
 
@@ -23,6 +23,7 @@
 body {
     width: 100%;
     min-height: 100vh;
+    font-family: "Nunito", serif;
     font-family: "Poppins", serif;
     overflow-x: hidden;
     background-color: #3e3e3e;
@@ -54,14 +55,11 @@ ul,li,a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
+    height: 11vh;
     padding: 0 var(--site-spacing);
     border-bottom: 1px solid rgba(128, 128, 128, 0.116);
-    
-
     z-index: 11111;
     background-color: var(--primary-color);
-
     position: sticky;
     top: 0;
     right: 0;
@@ -78,8 +76,7 @@ ul,li,a {
 .nav {
     display: flex;
     align-items: center;
-    gap: 3rem;
- 
+    gap: 2rem;
     position: relative;
   
 }
@@ -91,9 +88,19 @@ ul,li,a {
    
 }
 
+
 .nav a:hover {
-   color: #a7a1a1;
+   color: #c6c3c3b7;
 }
+
+.nav .selected-link {
+color: var(--second-color);
+}
+
+.nav .selected-link:hover {
+    color: rgba(90, 13, 215, 0.589);
+    }
+
 
 .img-box {
     display: flex;
@@ -203,6 +210,8 @@ display: none;
 
 .team-banner {
     display: flex;
+    
+    margin-top: 20px;
 
 
 }
@@ -212,6 +221,8 @@ display: none;
     flex-direction: column;
     align-items: center;
     width: calc(100% / 3);
+ 
+    
 }
 
 .x-text {
@@ -233,7 +244,8 @@ display: none;
 }
 
 .team-info img{
-    height: 200px;
+    height: 140px;
+    margin-bottom: 15px;
 }
 .button-content {
     width: 100%;
@@ -702,7 +714,6 @@ display: none;
 .accout-profile {
     position: fixed;
     top: 9vh;
-
     transform: translateY(20px);
     right: var(--site-spacing);
     background-color: #0e0e0f;
@@ -710,25 +721,27 @@ display: none;
     width: 320px;
     padding: 1rem;
     transition: all .2s ease;
-    z-index: 11111;
+    z-index: -1111;
     opacity: 0;
- 
- 
+    display: none;
+
+
+}
+
+.accout-profile.loggedOpen {
+    display: block ;
+    transform: translateY(0px);
+    transition: all .4s ease;
+    opacity: 1;
+    z-index: 11111;
+
 }
 
 #logout-img {
     margin: 10px 0;
 }
 
-.accout-profile.loggedOpen {
-    display: block;
-    transform: translateY(0px);
-    transition: all .4s ease;
-    opacity: 1;
-   
-  
 
-}
 
 .manage-container {
     display: flex;

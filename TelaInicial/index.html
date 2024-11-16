@@ -13,7 +13,7 @@
             <a href="./index.html"> <img class="logo-img" src="./Imagens/Logogolbet.header.png" ></a>
            
             <nav class="nav">
-              <a href="#">Apostar</a>
+              <a class="selected-link" href="#">Apostar</a>
               <a href="#">Histórico de Apostas</a>
               <a href="#">Próximos jogos</a>
               <a href="#">Depositar</a>
@@ -22,21 +22,10 @@
                   <a href="#"><img class="carrinho-img" src="./Imagens/carrinho-removebg-preview.png"></a>    
                   <a href="#"><img class="account-icon" src="./Imagens/reload-removebg-preview.png"></a>
                   <a class="img-button" href="#"><img class="account-icon" src="./Imagens/iconeConta.png"></a>
-                 
-              </div>
-        
-      
-          
-             
+         
+              </div>       
             </nav>
-      
-        
-      
-      
-      
-      
-      
-      
+
           </header>
 
                
@@ -52,7 +41,7 @@
             </div>
             <div class="manage-container">
               
-                    <a href="#" class="manage-button">
+                    <a href="./accountPage/index.html" class="manage-button">
                         <img src="./Imagens/profile.png">
                         <p>Editar Perfil</p>
                         <span>></span>
@@ -106,7 +95,6 @@
 
 
       <section class="main-section">
-      
         <main class="main-container">
           <div class="text-box">
             <h1 class="title">Onde cada <span class="purple-txt">Palpite</span> conta! <br>   <span class="sub-title">Sua chance, Seu jogo, <br> Sua <span class="purple-txt">Vitória!</span>  </span></h1>
@@ -117,11 +105,11 @@
             
             <div class="aposta-card">
               
-              <p class="paragraph-text" > <span class="purple-txt">Amanhã</span> <br> 25 agosto 2024, 16:00</p>
+              <p class="paragraph-text" > <span class="purple-txt">Terça feira</span> <br> 26 novembro 2024, 21:30</p>
               <div class="team-banner">
     
                 <div class="team-info">
-                    <img src="./Imagens/corinthiasLogo.png">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/2048px-Palmeiras_logo.svg.png">
                   <p>Casa 1.81</p>
                 </div>
     
@@ -131,13 +119,13 @@
                 </div>
     
                 <div class="team-info">
-                  <img src="./Imagens/corinthiasLogo.png">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1816px-Botafogo_de_Futebol_e_Regatas_logo.svg.png">
                   <p >Casa 1.81</p>
                 </div>
                 
               </div>
               <div class="button-content">
-                <a class="button" href="#">Comece a Apostar</a>
+                <a class="button" href="../LoginPage/index.html">Comece a Apostar</a>
               </div>
              
               
@@ -148,7 +136,7 @@
      
     
         <aside class="apostas-site-container">  
-          <h1 class="tached-text" >APOSTE E DESCUBRA</h1> 
+          <h1 class="tached-text" id="target" >APOSTE E DESCUBRA</h1> 
           <div class="campeonats-container">
             <p class="nav-button">Brasileirão</p>
             <p class="nav-button">Sudamericana</p>
@@ -344,7 +332,7 @@
           
         </div>
     
-        <h1 class="tached-text" >PRÓXIMOS JOGOS</h1> 
+        <h1 class="tached-text"   >PRÓXIMOS JOGOS</h1> 
     
     
         <div class="todas-apostar-container">
@@ -700,7 +688,7 @@
     
        
     
-        </div>
+      </section>
     
         <footer class="footer">
         <div class="top-footer">
@@ -738,9 +726,9 @@
           <img src="./Imagens/Logogolbet.rodape.png">
           <p>© 2024 GolBet, Todos Direitos Reservados. </p>
           <ul class="social-links">
-            <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
-            <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
-            <li class="social-icon"><a href="#"><img src="https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-uhex221m.png"></a></li>
+            <li class="social-icon"><a href="#"><img src="./Imagens/linkedinIcon.png"></a></li>
+            <li class="social-icon"><a href="#"><img src="./Imagens/icons8-instagram-24.png"></a></li>
+            <li class="social-icon"><a href="#"><img src="./Imagens/icons8-twitter-24.png"></a></li>
           </ul>
         </div>
          
@@ -753,7 +741,7 @@
     
     
       <div class="cookies-container"> 
-        <p class="cookies-text">Usamos cookies para melhorar sua experiência em nosso site. Se você continuar a usar o GolBet, registraremos que está de acordo. Saiba quais dados são recolhidos acessando nossa  <span class="purple-txt">Política de grupos</span> </p>
+        <p class="cookies-text">Usamos cookies para melhorar sua experiência em nosso site. Se você continuar a usar o GolBet, registraremos que está de acordo. Saiba quais dados são recolhidos acessando nossa  <a href="#" class="purple-txt">Política de grupos</a> </p>
         <div class="flex" id="buttons-container">
             <p class="cookies-button" id="reject-button">Rejeitar</p>
             <p class="cookies-button" id="accept-button">Aceitar todos os cookies</p>
@@ -800,5 +788,6 @@
   <script src="./javascriptFolder/changeImg.js"></script>
   <script src="./javascriptFolder/openProfile.js"></script>
   <script src="./javascriptFolder/SlideApostas.js"></script>
+  <script src="./javascriptFolder/scrollSite.js"></script>
 </body>
 </html>

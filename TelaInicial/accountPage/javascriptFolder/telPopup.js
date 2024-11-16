@@ -20,7 +20,7 @@ ButtonEdit.addEventListener("click", function () {
 buttonSave.addEventListener("click", function() {
     PopupContainer.classList.remove("open");
     containerSite.classList.remove("blur");
-    telLabel.textContent = telInput.value.slice(0, -4) + "-" + telInput.value.slice(-4);
+    telLabel.textContent = "+55 " +  telInput.value.slice(0, -4) + "-" + telInput.value.slice(-4);
 
    
 
